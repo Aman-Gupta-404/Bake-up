@@ -1,0 +1,291 @@
+body {
+  background-color: black;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+footer {
+  /* position: fixed; */
+  bottom: 0;
+  z-index: 1;
+  margin-top: 7%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  width: 100%;
+  /* text-align: center; */
+  height: 50%;
+  display: flex;
+}
+
+.social-Icons {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-top {
+  background-color: #333;
+  color: #aaa;
+  height: 120%;
+}
+
+footer {
+  margin-top: 20%;
+  width: 100%;
+}
+
+.footer-contact {
+  text-align: start;
+}
+
+.material-icon {
+  font-size: large;
+}
+
+.head {
+  color: white;
+}
+
+.noListStyle {
+  margin-left: 40px;
+  list-style-type: none;
+  float: left;
+  text-align: left;
+}
+
+.mainBody {
+  height: 80%;
+}
+
+.footerHead {
+  color: black;
+  height: 26%;
+  background-color: #f1f1f1;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
+  text-align: center;
+  justify-content: center;
+}
+
+.footerContainer > .listItem {
+  text-align: center;
+  display: block;
+  padding-left: 60px;
+}
+
+/* css for cards */
+#cardImage {
+  height: 200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* css for images */
+#productImage {
+  object-fit: cover;
+  width: 450px;
+  height: 425px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TODO: center the item card within the container */
+#itemCard {
+  /* background-color: #f2f2f2; */
+  text-decoration: none;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  color: black;
+  margin-top: 70px;
+}
+
+#itemCard:hover {
+  text-decoration: none;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#cardLink {
+  text-decoration: none;
+}
+
+#cardButton {
+  border: none;
+  background-color: #f0a500;
+  transition: 0.3s;
+}
+
+#cardButton:hover {
+  background-color: #cf7500;
+}
+
+.jumbotron {
+  background-image: url(../src/components/Images/bgc.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-weight: bold;
+  /* box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); */
+  color: white;
+  border-radius: 0px;
+  height: 400px;
+  text-align: center;
+  /* margin-top: 5%; */
+}
+
+.jumbo-text {
+  text-shadow: 1.5px 1.5px rgb(90, 90, 90);
+}
+
+.jumbo-child {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.jumbo-head {
+  font-weight: 800;
+  font-size: 3rem;
+}
+/* Css for navbar */
+
+#normalNav {
+  color: #f8d76a;
+}
+
+#highlightNav {
+  color: white;
+}
+
+#navButton {
+  background-color: #cf7500;
+  transition: 0.3s;
+  border: none;
+}
+
+.activeTab {
+  color: red;
+}
+
+.navbar {
+  background-color: #f0a500;
+  color: white;
+  font-size: medium;
+  font-weight: 500;
+}
+#navButton:hover {
+  /* color: #f0a500; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#brightButton {
+  color: white;
+  border: none;
+  background-color: #f0a500;
+  transition: 0.3s;
+}
+
+#brightButton:hover {
+  color: white;
+  background-color: #cf7500;
+}
+
+#GreyButton {
+  color: white;
+  border: none;
+  background-color: #a7a7a7;
+  transition: 0.3s;
+}
+
+#GreyButton:hover {
+  text-decoration: none;
+  background-color: #777777;
+}
+
+.categoryButton {
+  float: right;
+}
+
+#greyButton {
+  border: none;
+  background: #b4b4b4;
+}
+
+/* Password icon toggle buttons */
+.passIcon {
+  margin-left: 490px;
+  padding-bottom: 20px;
+}
+
+/* styles for the error message */
+.errorMsg {
+  color: red;
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 10px auto 10px auto;
+  border-radius: 7px;
+  margin-top: 9%;
+}
+
+/* styles for loading giff */
+.loading {
+  background-image: url(../src/components/admin/5.gif);
+  text-align: center;
+  /* float: right; */
+  /* border: 1px solid black; */
+  padding: 0;
+  display: block;
+}
+
+/* User Profile Image */
+#userProfileImage {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 225px;
+  height: 225px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.userProfileDiv {
+  padding-left: auto;
+  padding-right: auto;
+}
+
+/* User dashboard curd list */
+.CurdList {
+  color: inherit;
+}
+
+.CurdList:hover {
+  text-decoration: none;
+  text-shadow: black;
+}
+
+#notLink {
+  text-decoration: none;
+  color: black;
+}
+
+.about {
+  color: #4d4d4d;
+}
+
+.about > h2 {
+  color: black;
+}
+
+#checkout-price {
+  float: right;
+}
