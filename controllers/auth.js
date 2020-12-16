@@ -31,6 +31,8 @@ exports.signUp = (req, res) => {
 
 // Login controller
 exports.login = (req, res) => {
+  console.log("---MESSAGE FORM AUTH CONTROLLER---");
+
   // checkin for validation results
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
@@ -52,15 +54,6 @@ exports.login = (req, res) => {
       });
     }
     const userId = user._id;
-
-    //generating token with validity of one hour
-    // var accessToken = jwt.sign(
-    //   {
-    //     data: userId,
-    //   },
-    //   process.env.TOKEN_SECRET,
-    //   { expiresIn: "1d", issuer: process.env.HOST_URI }
-    // );
 
     var accessToken = createAccessToken(userId);
     var refreshToken = createRefreshToken(userId);
