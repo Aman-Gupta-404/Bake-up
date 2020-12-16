@@ -110,7 +110,13 @@ function Login() {
         });
         window.location.replace("/");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        setLogin({
+          ...login,
+          success: false,
+        });
+        console.log(err);
+      });
   };
 
   // TODO:
