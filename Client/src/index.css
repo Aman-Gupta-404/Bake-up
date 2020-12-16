@@ -19,11 +19,12 @@ footer {
   z-index: 1;
   margin-top: 7%;
   padding-bottom: 0;
-  margin-bottom: 0;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
   width: 100%;
   /* text-align: center; */
   height: 50%;
-  display: flex;
 }
 
 .social-Icons {
