@@ -9,7 +9,7 @@ import Card from "react-bootstrap/Card";
 // }
 
 function ImageHelper({ _id, Admindisplay }) {
-  const imgUrl = `${process.env.REACT_APP_BACKENDURL}/product/image/${_id}`;
+  const imgUrl = `/api/product/image/${_id}`;
   if (Admindisplay) {
     return (
       <>

@@ -147,7 +147,7 @@ function AddProducts() {
             <h3>Add Product</h3>
           </Card.Header>
           <Card.Body>
-            <Form action={`${process.env.REACT_APP_BACKENDURL}/product/upload`}>
+            <Form action={`/api/product/upload`}>
               {/* To add photos */}
               <Form.Group>
                 <Form.File
@@ -271,14 +271,24 @@ function AddProducts() {
     }
   };
 
-  return (
-    <Base>
-      {/* {SuccessMessage()} */}
-      {errorMessage()}
-      {performRedirect()}
-      {productForm()}
-    </Base>
-  );
+  const loading = () => {
+    if (success.loading) {
+      return;
+    }
+  };
+
+  if (success.loading) {
+    return <div className="container text-center">loading...</div>;
+  } else {
+    return (
+      <Base>
+        {/* {SuccessMessage()} */}
+        {errorMessage()}
+        {performRedirect()}
+        {productForm()}
+      </Base>
+    );
+  }
 }
 
 export default AddProducts;

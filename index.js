@@ -28,11 +28,12 @@ var category = require("./routes/category");
 var user = require("./routes/user");
 
 // Port variable
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 
 // pre built middlewares
 app.use(
   cors({
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );

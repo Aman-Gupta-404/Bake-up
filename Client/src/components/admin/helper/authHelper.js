@@ -2,7 +2,7 @@ import store from "../../../redux/store";
 import { REMOVE_USER } from "../../../redux/users/userTypes";
 
 export const signUp = (data) => {
-  return fetch(`${process.env.REACT_APP_BACKENDURL}/signup`, {
+  return fetch(`/api/signup`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -23,7 +23,7 @@ export const signUp = (data) => {
 
 // function to handle login of the user
 export const loginUser = (user) => {
-  return fetch(`${process.env.REACT_APP_BACKENDURL}/login`, {
+  return fetch(`/api/login`, {
     method: "POST",
     // credentials: "include",
     credentials: "include",
@@ -55,7 +55,7 @@ export const storeUser = (user) => {
 };
 
 export const logoutUser = () => {
-  return fetch(`${process.env.REACT_APP_BACKENDURL}/logout`, {
+  return fetch(`/api/logout`, {
     method: "GET",
     credentials: "include",
   })
@@ -92,7 +92,7 @@ export const isAdmin = () => {
 };
 
 export const refreshAccessToken = () => {
-  return fetch(`${process.env.REACT_APP_BACKENDURL}/refresh_token`, {
+  return fetch(`/api/refresh_token`, {
     method: "POST",
     credentials: "include",
   })

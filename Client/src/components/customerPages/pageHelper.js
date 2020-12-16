@@ -1,5 +1,5 @@
 export const getSingleProduct = (productId) => {
-  return fetch(`${process.env.REACT_APP_BACKENDURL}/product/${productId}`, {
+  return fetch(`/api/product/${productId}`, {
     method: "get",
   })
     .then((res) => {
@@ -11,7 +11,7 @@ export const getSingleProduct = (productId) => {
 };
 
 export const getCartProducts = (userId, token) => {
-  return fetch(`${process.env.REACT_APP_BACKENDURL}/user/cart/get/${userId}`, {
+  return fetch(`/api/user/cart/get/${userId}`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,

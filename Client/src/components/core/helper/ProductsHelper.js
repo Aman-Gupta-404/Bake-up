@@ -2,10 +2,12 @@ const { default: store } = require("../../../redux/store");
 
 exports.getAllProducts = () => {
   // console.log("Api call being made");
-  return fetch(`${process.env.REACT_APP_BACKENDURL}/products/allproducts`, {
+  // return fetch(`${process.env.REACT_APP_BACKENDURL}/products/allproducts`, {
+  return fetch(`/api/products/allproducts`, {
     method: "GET",
   })
     .then((result) => {
+      console.log(result);
       return result.json();
     })
     .catch((err) => {
@@ -19,7 +21,7 @@ exports.addProductToCart = (productId, userId, token) => {
   const data = {
     cart: [productId],
   };
-  return fetch(`${process.env.REACT_APP_BACKENDURL}/user/cart/add/${userId}`, {
+  return fetch(`/api/user/cart/add/${userId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -46,17 +48,14 @@ exports.removefromCart = (productId, userId, token) => {
   // });
   // console.log(cartData);
 
-  return fetch(
-    `${process.env.REACT_APP_BACKENDURL}/user/cart/delete/${userId}`,
-    {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify(cartData),
-    }
-  )
+  return fetch(`/api/user/cart/delete/${userId}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(cartData),
+  })
     .then((res) => {
       return res.json();
     })

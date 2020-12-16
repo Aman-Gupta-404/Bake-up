@@ -9,7 +9,7 @@ export const updateUser = (user) => {
     email,
   };
 
-  return fetch(`${process.env.REACT_APP_BACKENDURL}/user/update/${_id}`, {
+  return fetch(`/api/user/update/${_id}`, {
     method: "PUT",
     credentials: "include",
     headers: {

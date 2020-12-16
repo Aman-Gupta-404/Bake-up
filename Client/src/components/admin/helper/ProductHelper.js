@@ -1,7 +1,7 @@
 import store from "../../../redux/store";
 
 export const getAllCategories = () => {
-  return fetch(`${process.env.REACT_APP_BACKENDURL}//category/getcategory`)
+  return fetch(`/api/category/getcategory`)
     .then((res) => {
       return res.json();
     })
@@ -12,18 +12,15 @@ export const getAllCategories = () => {
 
 export const createCategory = (category, token, userId) => {
   // const userId = store
-  return fetch(
-    `${process.env.REACT_APP_BACKENDURL}/category/create/${userId}`,
-    {
-      method: "POST",
-      headers: {
-        // Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify(category),
-    }
-  )
+  return fetch(`/api/category/create/${userId}`, {
+    method: "POST",
+    headers: {
+      // Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(category),
+  })
     .then((res) => {
       return res.json();
     })
@@ -34,15 +31,12 @@ export const createCategory = (category, token, userId) => {
 };
 
 export const deleteCategory = (categoryId, userId, token) => {
-  return fetch(
-    `${process.env.REACT_APP_BACKENDURL}/category/delete/${categoryId}/${userId}`,
-    {
-      method: "DELETE",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  )
+  return fetch(`/api/category/delete/${categoryId}/${userId}`, {
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  })
     .then((res) => {
       // console.log(res);
       return res.json();
@@ -55,7 +49,7 @@ export const deleteCategory = (categoryId, userId, token) => {
 
 // Products function
 export const createProduct = (product, userId, token) => {
-  return fetch(`${process.env.REACT_APP_BACKENDURL}/product/upload/${userId}`, {
+  return fetch(`/api/product/upload/${userId}`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -71,15 +65,12 @@ export const createProduct = (product, userId, token) => {
 };
 
 export const deleteProduct = (productId, userId, token) => {
-  return fetch(
-    `${process.env.REACT_APP_BACKENDURL}/product/delete/${productId}/${userId}`,
-    {
-      method: "DELETE",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  )
+  return fetch(`/api/product/delete/${productId}/${userId}`, {
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  })
     .then((res) => {
       return res.json();
     })
