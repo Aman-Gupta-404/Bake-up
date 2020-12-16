@@ -28,7 +28,7 @@ var category = require("./routes/category");
 var user = require("./routes/user");
 
 // Port variable
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // pre built middlewares
 app.use(
