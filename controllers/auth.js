@@ -105,7 +105,6 @@ exports.isSignedIn = (req, res, next) => {
   const options = { expiresIn: "1h", issuer: process.env.HOST_URI };
   try {
     var result = jwt.verify(token, process.env.TOKEN_SECRET, options);
-    console.log("Result: ", result);
   } catch (err) {
     // console.log(err);
     res.status(401).json({
