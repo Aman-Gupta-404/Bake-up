@@ -149,9 +149,14 @@ export default withRouter(function NavbarMenu({ history }) {
   }
 
   return (
-    <div>
+    <>
       {/* <Navbar bg="dark" variant="dark" expand="lg" className="navbar"> */}
-      <Navbar expand="lg" variant="dark" className="navbar text-white">
+      <Navbar
+        expand="lg"
+        variant="dark"
+        id="navbarid"
+        className="navbar text-white"
+      >
         <Navbar.Brand as={Link} to="/" className="font-weight-bold">
           Bake-Up
         </Navbar.Brand>
@@ -213,6 +218,6 @@ export default withRouter(function NavbarMenu({ history }) {
           </Button>
         </Modal.Footer>
       </Modal>
-    </div>
+    </>
   );
 });

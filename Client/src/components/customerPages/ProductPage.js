@@ -127,10 +127,10 @@ function ProductPage(props) {
     <Base>
       <div className="mt-5 ">
         <div className="row">
-          <div className="col-5 col-sm-12 justify-content-center text-center ">
+          <div className="col-lg-5 col-sm-12 justify-content-center text-center ">
             <ImageHelper _id={_id} Admindisplay={true} />
           </div>
-          <div className="col-7 col-sm-12">
+          <div className="col-lg-7 col-sm-12">
             <h2>{product.name}</h2>
             <p>{product.description}</p>
             {/* <p>Category: {product.category}</p> */}

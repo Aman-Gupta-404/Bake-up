@@ -161,6 +161,12 @@ footer {
 }
 /* Css for navbar */
 
+#navbarid {
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 #normalNav {
   color: #f8d76a;
 }
