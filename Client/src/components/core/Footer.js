@@ -36,7 +36,7 @@ function Footer() {
                 </p>
                 <p>
                   <EmailIcon id="material-icon" />
-                  <span> Email: fake@bakeup.com</span>
+                  <span> Email: ag9139563@gmail.com</span>
                 </p>
               </div>
               <div className="col-md-4 col-lg-4 mt-5 footer-about ">

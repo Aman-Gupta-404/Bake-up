@@ -15,6 +15,9 @@ function About() {
             is used for the database and React is used for the frontend
           </p>
           <p>Redux is also used for the state management of the website.</p>
+          <br />
+          <h2>Contact</h2>
+          <p>Email: ag9139563@gmail.com</p>
         </div>
       </Base>
     </div>
