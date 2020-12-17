@@ -31,14 +31,13 @@ exports.signUp = (req, res) => {
 
 // Login controller
 exports.login = (req, res) => {
-  console.log("---MESSAGE FORM AUTH CONTROLLER---");
-
   // checkin for validation results
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ error: errors.array()[0] });
   }
   const loginData = req.body;
+  console.log("Login Data is: ", loginData);
 
   User.findOne({ email: loginData.email }, function (err, user) {
     if (err) {
