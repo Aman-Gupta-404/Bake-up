@@ -59,15 +59,15 @@ exports.login = (req, res) => {
 
     const oneDayToSeconds = 24 * 60 * 60; //24 hours validity time for cookies
 
-    // res.cookie("refjid", refreshToken, {
-    //   maxAge: oneDayToSeconds,
-    //   // You can't access these tokens in the client's javascript
-    //   httpOnly: true,
-    //   // Forces to use https in production
-    //   // secure: process.env.NODE_ENV === "production" ? true : false,
-    //   secure: true,
-    //   // secure: true,
-    // });
+    res.cookie("refjid", refreshToken, {
+      maxAge: oneDayToSeconds,
+      // You can't access these tokens in the client's javascript
+      httpOnly: true,
+      // Forces to use https in production
+      // secure: process.env.NODE_ENV === "production" ? true : false,
+      secure: true,
+      // secure: true,
+    });
 
     const { firstName, lastName, email, _id, isAdmin, cart } = user;
     return res.json({
