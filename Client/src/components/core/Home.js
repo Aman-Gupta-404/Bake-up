@@ -74,6 +74,7 @@ function Home() {
 
   const cardRender = () => {
     if (products.length !== 0) {
+      console.log(products);
       return (
         <>
           {products.length !== 0 &&
