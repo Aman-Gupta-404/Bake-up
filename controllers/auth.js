@@ -70,7 +70,7 @@ exports.login = (req, res) => {
     // });
 
     const { firstName, lastName, email, _id, isAdmin, cart } = user;
-    res.json({
+    return res.json({
       _id,
       firstName,
       lastName,
