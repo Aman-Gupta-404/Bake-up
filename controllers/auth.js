@@ -102,7 +102,7 @@ exports.isSignedIn = (req, res, next) => {
   }
 
   const token = req.headers.authorization.split(" ")[1];
-  const options = { expiresIn: "1h", issuer: "http://localhost:5000" };
+  const options = { expiresIn: "1h", issuer: process.env.HOST_URI };
   console.log("Token: ", token);
   try {
     var result = jwt.verify(token, process.env.TOKEN_SECRET, options);
