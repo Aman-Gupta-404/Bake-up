@@ -153,8 +153,12 @@ exports.refreshAccessToken = (req, res) => {
     });
   } else {
     // no seperate code
-
-    const decoded = jwt.verify(token, process.env.REFRESH_TOKEN_SECRET);
+    const options = { expiresIn: "1h", issuer: process.env.HOST_URI };
+    const decoded = jwt.verify(
+      token,
+      process.env.REFRESH_TOKEN_SECRET,
+      options
+    );
     const id = decoded.data;
     User.findById({ _id: id }, (err, user) => {
       if (err || !user) {
